@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="image-side">
+        <div class="img"></div>
+    </div>
+
+    <div class="fields-side">
+        <div class="header">
+            <h1 class="title">Currículo</h1>
+            <h3 class="sub-title">E.E. Cultura e Liberdade</h3>
+            <div class="logo"></div>
+        </div>
+
+        <form class="form" [formGroup]="formGroup">
+
+            <!-- <div class="card">
+                <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+            </div> -->
+
+            <div class="field">
+                <label htmlFor="email">E-mail</label>
+                <input formControlName="email" name="email" class="input" type="text" placeholder="E-mail"
+                    [ngClass]="{'invalid-field': formGroup.controls['email'].invalid && formGroup.controls['email'].touched}">
+
+                <small *ngIf="formGroup.controls['email'].hasError('required') && formGroup.controls['email'].touched" class="validation-message">
+                    Campo obrigatório.
+                </small>
+                <small *ngIf="formGroup.controls['email'].hasError('email') && !formGroup.controls['email'].hasError('required') && formGroup.controls['email'].touched" class="validation-message">
+                    E-mail inválido. Por favor, insira um e-mail válido.
+                </small>
+
+            </div>
+            <div class="field">
+                <label htmlFor="email">Senha</label>
+                <input formControlName="senha" name="senha" class="input" type="password" placeholder="Senha"
+                    [ngClass]="{'invalid-field': formGroup.controls['senha'].invalid && formGroup.controls['senha'].touched}">
+
+                 <small *ngIf="formGroup.controls['senha'].invalid && formGroup.controls['senha'].touched" class="validation-message">
+                    Campo obrigatório.
+                </small>
+            </div>
+
+            <p>Esqueceu a senha?</p>
+        </form>
+
+        <div class="submit card flex justify-content-center">
+            <p-button label="Login" [loading]="onLoading" (onClick)="onSubmitLogin()" type="submit"></p-button>
+        </div>
+
+    </div>
+
+</div>

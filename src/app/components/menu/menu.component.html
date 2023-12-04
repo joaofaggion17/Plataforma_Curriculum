@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="logo-box">
+        <div class="logo"></div>
+    </div>
+
+    <div class="options">
+
+        <ng-container *ngIf="userInfo.cargo === 'Aluno'; else administrador">
+            <div class="field">
+                <i class='bx bx-file'></i>
+                <button class="btn">
+                    Ver meu currículo
+                </button>
+            </div>
+
+            <div class="field">
+                <i class='bx bx-edit-alt' ></i>
+                <button class="btn">
+                    Editar meu currículo
+                </button>
+            </div>
+
+        </ng-container>
+
+        <ng-template #administrador>
+            <div class="field">
+                <i class='bx bx-user'></i>
+                <button class="btn">
+                    Gerenciar Usuários
+                </button>
+            </div>
+
+            <div class="field">
+                <i class='bx bx-file' ></i>
+                <button class="btn">
+                    Listar Currículos
+                </button>
+            </div>
+        </ng-template>
+        
+        
+        
+
+    </div>
+
+    <div class="logout">
+
+        <div class="user">
+            <img src="https://icon-library.com/images/default-user-icon/default-user-icon-13.jpg" alt="Image Profile" class="profile">
+        </div>
+
+        <p> {{ userInfo.nome }} </p>
+
+        <!-- <button class="btn btn-logout">
+            <i class='bx bx-log-out'></i>
+            Sair
+        </button> -->
+    </div>
+</div>
+
+
