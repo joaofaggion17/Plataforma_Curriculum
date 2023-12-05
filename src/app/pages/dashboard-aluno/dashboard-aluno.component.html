@@ -3,7 +3,172 @@
     <app-menu></app-menu>
 
     <div class="content">
-        <p>teste</p>
+        <h1>Currículo</h1>
+
+        <form [formGroup]="formGroup" (ngSubmit)="salvarCurriculo()">
+            <div class="item">
+                <label htmlFor="nome">Nome</label>
+                <input id="nome" type="text" formControlName="nome" 
+                    [ngClass]="{'invalid-field': formGroup.controls['nome'].invalid && formGroup.controls['nome'].touched}">
+                <small *ngIf="formGroup.controls['nome'].invalid && formGroup.controls['nome'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="email">E-mail</label>
+                <input id="email" type="text" formControlName="email" 
+                    [ngClass]="{'invalid-field': formGroup.controls['email'].invalid && formGroup.controls['email'].touched}">
+                <small *ngIf="formGroup.controls['email'].invalid && formGroup.controls['email'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="telefone">Telefone</label>
+                <input id="telefone" type="text" formControlName="telefone" 
+                    [ngClass]="{'invalid-field': formGroup.controls['telefone'].invalid && formGroup.controls['telefone'].touched}">
+                <small *ngIf="formGroup.controls['telefone'].invalid && formGroup.controls['telefone'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="rg">RG</label>
+                <input id="rg" type="text" formControlName="rg" 
+                    [ngClass]="{'invalid-field': formGroup.controls['rg'].invalid && formGroup.controls['rg'].touched}">
+                <small *ngIf="formGroup.controls['rg'].invalid && formGroup.controls['rg'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="cpf">CPF</label>
+                <input id="cpf" type="text" formControlName="cpf" 
+                    [ngClass]="{'invalid-field': formGroup.controls['cpf'].invalid && formGroup.controls['cpf'].touched}">
+                <small *ngIf="formGroup.controls['cpf'].invalid && formGroup.controls['cpf'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="endereco">Endereço</label>
+                <input id="endereco" type="text" formControlName="endereco" 
+                    [ngClass]="{'invalid-field': formGroup.controls['endereco'].invalid && formGroup.controls['endereco'].touched}">
+                <small *ngIf="formGroup.controls['endereco'].invalid && formGroup.controls['endereco'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="cidade">Cidade</label>
+                <input id="cidade" type="text" formControlName="cidade" 
+                    [ngClass]="{'invalid-field': formGroup.controls['cidade'].invalid && formGroup.controls['cidade'].touched}">
+                <small *ngIf="formGroup.controls['cidade'].invalid && formGroup.controls['cidade'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="estado">Estado</label>
+                <input id="estado" type="text" formControlName="estado" 
+                    [ngClass]="{'invalid-field': formGroup.controls['estado'].invalid && formGroup.controls['estado'].touched}">
+                <small *ngIf="formGroup.controls['estado'].invalid && formGroup.controls['estado'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="cep">CEP</label>
+                <input id="cep" type="text" formControlName="cep" 
+                    [ngClass]="{'invalid-field': formGroup.controls['cep'].invalid && formGroup.controls['cep'].touched}">
+                <small *ngIf="formGroup.controls['cep'].invalid && formGroup.controls['cep'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="curso">Curso</label>
+                <input id="curso" type="text" formControlName="curso" 
+                    [ngClass]="{'invalid-field': formGroup.controls['curso'].invalid && formGroup.controls['curso'].touched}">
+                <small *ngIf="formGroup.controls['curso'].invalid && formGroup.controls['curso'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="instituicao">Instituição</label>
+                <input id="instituicao" type="text" formControlName="instituicao" 
+                    [ngClass]="{'invalid-field': formGroup.controls['instituicao'].invalid && formGroup.controls['instituicao'].touched}">
+                <small *ngIf="formGroup.controls['instituicao'].invalid && formGroup.controls['instituicao'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="data_inicio">data Início</label>
+                <input id="data_inicio" type="text" formControlName="data_inicio" 
+                    [ngClass]="{'invalid-field': formGroup.controls['data_inicio'].invalid && formGroup.controls['data_inicio'].touched}">
+                <small *ngIf="formGroup.controls['data_inicio'].invalid && formGroup.controls['data_inicio'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="data_termino">data Termino</label>
+                <input id="data_termino" type="text" formControlName="data_termino" 
+                    [ngClass]="{'invalid-field': formGroup.controls['data_termino'].invalid && formGroup.controls['data_termino'].touched}">
+                <small *ngIf="formGroup.controls['data_termino'].invalid && formGroup.controls['data_termino'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="habilidades">Habilidades</label>
+                <input id="habilidades" type="text" formControlName="habilidades" 
+                    [ngClass]="{'invalid-field': formGroup.controls['habilidades'].invalid && formGroup.controls['habilidades'].touched}">
+                <small *ngIf="formGroup.controls['habilidades'].invalid && formGroup.controls['habilidades'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="experiencia">Experiências</label>
+                <input id="experiencia" type="text" formControlName="experiencia" 
+                    [ngClass]="{'invalid-field': formGroup.controls['experiencia'].invalid && formGroup.controls['experiencia'].touched}">
+                <small *ngIf="formGroup.controls['experiencia'].invalid && formGroup.controls['experiencia'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+            <div class="item">
+                <label htmlFor="atividades_extras">Atividades Extras</label>
+                <input id="atividades_extras" type="text" formControlName="atividades_extras" 
+                    [ngClass]="{'invalid-field': formGroup.controls['atividades_extras'].invalid && formGroup.controls['atividades_extras'].touched}">
+                <small *ngIf="formGroup.controls['atividades_extras'].invalid && formGroup.controls['atividades_extras'].touched"
+                    class="validation-message">
+                    Campo obrigatório
+                </small>
+            </div>
+
+
+            <button class="btn" type="submit" [disabled]="formGroup.invalid">Salvar</button>
+        </form>
     </div>
 
 

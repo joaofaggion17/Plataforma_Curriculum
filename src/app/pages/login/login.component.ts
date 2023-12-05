@@ -39,14 +39,15 @@ export class LoginComponent implements OnInit {
           this.authService.setIsAuthenticated(true);
           console.info("Usuário logado: ", res);
 
-          const userRole = Role[res.cargo as unknown as keyof typeof Role];
+          // const userRole = Role[res.cargo as unknown as keyof typeof Role];
+          
 
-          if (userRole === Role.Administrador) {
+          if (res.cargo === Role.Administrador) {
             console.info("Usuário logado: ", res.cargo);
-            this.router.navigate(['/dashboard-aluno']);
+            this.router.navigate(['/dashboard-adm']);
           }
 
-          if (userRole === Role.Aluno) {
+          if (res.cargo === Role.Aluno) {
             console.info("Usuário logado: ", res.cargo);
             this.router.navigate(['/dashboard-aluno']);
           }

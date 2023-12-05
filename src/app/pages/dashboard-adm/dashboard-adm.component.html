@@ -1,1 +1,152 @@
-<p>dashboard-adm works!</p>
+<div class="container">
+
+    <app-menu></app-menu>
+
+    <div class="content">
+       <div class="card-list">
+            <div class="card" *ngFor="let curriculo of curriculos" (click)="openModal(curriculo.nome)">
+
+                <div class="line">
+                    <div class="item">
+                        <label>Nome</label>
+                        <p> {{ curriculo.nome }} </p>
+                    </div>
+
+                    <div class="item">
+                        <label>Cidade</label>
+                        <p> {{ curriculo.cidade }} </p>
+                    </div>
+                </div>
+
+                <div class="line">
+                    <div class="item">
+                        <label>E-mail</label>
+                        <p> {{ curriculo.email }} </p>
+                    </div>
+
+                    <div class="item">
+                        <label>Telefone</label>
+                        <p> {{ curriculo.telefone }} </p>
+                    </div>
+                </div>
+
+            </div>
+       </div>
+    </div>
+</div>
+
+<p-dialog header="Currículo" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [modal]="true"
+    [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+
+    <div class="card">
+
+        <div class="line">
+            <div class="item">
+                <label>Nome</label>
+                <p> {{ curriculoUser?.nome }} </p>
+            </div>
+
+            <div class="item">
+                <label>Cidade</label>
+                <p> {{ curriculoUser?.cidade }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>E-mail</label>
+                <p> {{ curriculoUser?.email }} </p>
+            </div>
+
+            <div class="item">
+                <label>Telefone</label>
+                <p> {{ curriculoUser?.telefone }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+                <div class="item">
+                <label>RG</label>
+                <p> {{ curriculoUser?.rg }} </p>
+            </div>
+
+            <div class="item">
+                <label>CPF</label>
+                <p> {{ curriculoUser?.cpf }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>Endereço</label>
+                <p> {{ curriculoUser?.endereco }} </p>
+            </div>
+
+            <div class="item">
+                <label>Estado</label>
+                <p> {{ curriculoUser?.estado }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>CEP</label>
+                <p> {{ curriculoUser?.cep }} </p>
+            </div>
+
+            <div class="item">
+                <label>Instituição</label>
+                <p> {{ curriculoUser?.instituicao }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>Data Inicial</label>
+                <p> {{ curriculoUser?.data_inicio }} </p>
+            </div>
+
+            <div class="item">
+                <label>Data Final</label>
+                <p> {{ curriculoUser?.data_termino }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>Habilidades</label>
+                <p> {{ curriculoUser?.habilidades }} </p>
+            </div>
+
+            <div class="item">
+                <label>Experiências</label>
+                <p> {{ curriculoUser?.experiencia }} </p>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="item">
+                <label>Atividades Extras</label>
+                <p> {{ curriculoUser?.atividades_extras }} </p>
+            </div>
+        </div>
+
+    </div>
+
+</p-dialog>
+
+
+
+
+
+               
+
+
+
+
+
+                
+
+
+
+ 

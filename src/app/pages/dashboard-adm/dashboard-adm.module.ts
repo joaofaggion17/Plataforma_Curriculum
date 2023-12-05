@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardAdmRoutingModule } from './dashboard-adm-routing.module';
 import { DashboardAdmComponent } from './dashboard-adm.component';
+import { MenuModule } from 'src/app/components/menu/menu.module';
+import { DialogModule } from 'primeng/dialog';
+import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { DashboardAdmComponent } from './dashboard-adm.component';
   ],
   imports: [
     CommonModule,
-    DashboardAdmRoutingModule
+    DashboardAdmRoutingModule,
+    MenuModule,
+    DialogModule,
+    ToastModule
   ]
 })
 export class DashboardAdmModule { }

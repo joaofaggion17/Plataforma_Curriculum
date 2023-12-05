@@ -42,11 +42,11 @@ module.exports = {
 
     createCurriculum: async (request, response) => {
         try {
-            const { id_aluno, nome, data_nascimento, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, ano_inicio, ano_termino, habilidades, experiencia, atividades_extras  } = request.body;
+            const {id_aluno, data_nascimento, nome, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, data_inicio, data_termino, habilidades, experiencia, atividades_extras  } = request.body;
 
-            const query = `INSERT INTO curriculum (id_aluno, nome, data_nascimento, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, ano_inicio, ano_termino, habilidades, experiencia, atividades_extras) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
+            const query = `INSERT INTO curriculum (id_aluno, data_nascimento, nome, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, data_inicio, data_termino, habilidades, experiencia, atividades_extras) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
 
-            const result = await mysql.execute(query, [id_aluno, nome, data_nascimento, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, ano_inicio, ano_termino, habilidades, experiencia, atividades_extras]);
+            const result = await mysql.execute(query, [id_aluno, data_nascimento, nome, email, telefone, genero, rg, cpf, endereco, cidade, estado, cep, curso, instituicao, data_inicio, data_termino, habilidades, experiencia, atividades_extras]);
 
             return response.status(201).json({ message: 'Curriculum cadastrado com sucesso' });
         } catch (error) {

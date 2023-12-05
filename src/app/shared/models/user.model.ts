@@ -4,3 +4,9 @@ export interface IUserInfo {
     email: string;
     cargo: string;
 }
+
+export interface ChangePassword {
+    email: string;
+    senha_atual: string;
+    senha_nova: string;
+}

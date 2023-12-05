@@ -21,10 +21,10 @@ router.post('/create', celebrate({
     [Segments.BODY]: Joi.object().keys({
         id_aluno: Joi.number().required(),
         nome: Joi.string().required(),
-        data_nascimento: Joi.string().required(),
+        data_nascimento: Joi.any(),
         email: Joi.string().required(),
         telefone: Joi.string().required(),
-        genero: Joi.string().required(),
+        genero: Joi.any(),
         rg: Joi.string().required(),
         cpf: Joi.string().required(),
         endereco: Joi.string().required(),
@@ -33,8 +33,8 @@ router.post('/create', celebrate({
         cep: Joi.string().required(),
         curso: Joi.string().required(),
         instituicao: Joi.string().required(),
-        ano_inicio: Joi.string().required(),
-        ano_termino: Joi.string().required(),
+        data_inicio: Joi.string().required(),
+        data_termino: Joi.string().required(),
         habilidades: Joi.string().required(),
         experiencia: Joi.string().required(),
         atividades_extras: Joi.string().required()
